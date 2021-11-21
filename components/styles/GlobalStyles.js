@@ -13,10 +13,12 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Lora', serif;
         font-weight: 400;
         color: ${({ theme }) => theme.color};
+        text-align: center;
     }
 
     h1 {
-        font-size: 9.375rem;
+        font-size: 5rem; // 9.375rem desktop
+        color: ${({ theme }) => theme.primary};
     }
 
     h2 {
@@ -33,12 +35,16 @@ const GlobalStyles = createGlobalStyle`
 
     h5 {
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: 1.75rem;
-        letter-spacing: 4.75px;
+        font-size: 1rem;
+        letter-spacing: 2.7px;
+        color: ${({ theme }) => theme.secondary};
     }
 
     p {
         font-family: 'Barlow Condensed', sans-serif;
+        font-size: .935rem;
+        line-height: 25px;
+        color: ${({ theme }) => theme.secondary};
     }
 
     .subheading-1 {
