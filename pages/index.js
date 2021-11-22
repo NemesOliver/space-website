@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HomePage } from "../components/styles/Home.styled";
+import { HomePage } from "../components/styles/pages/Home.styled";
 import ButtonCTA from "../components/ButtonCTA";
 import Container from "../components/Container";
 import Flex from "../components/styles/utils/Flex";

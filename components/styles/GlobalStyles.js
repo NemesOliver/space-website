@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         color: ${({ theme }) => theme.color};
         text-align: center;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     h1 {
@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
     h3 {
         font-size: 3.5rem;
+        color: ${({ theme }) => theme.primary};
     }
 
     h4 {
@@ -38,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Barlow Condensed', sans-serif;
         font-size: 1rem;
         letter-spacing: 2.7px;
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.primary};
     }
 
     p {
@@ -62,6 +63,15 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Barlow Condensed', sans-serif;
         font-size: 1rem;
         letter-spacing: 2.7px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    hr {
+        border: 1px solid #383B4B;
+        margin: 2rem 0;
     }
 
 `;

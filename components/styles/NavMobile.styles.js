@@ -17,6 +17,7 @@ export const NavMobile = styled(motion.div)`
 
     li {
       margin-bottom: 2rem;
+      cursor: pointer;
       span {
         font-weight: bold;
         color: white;
