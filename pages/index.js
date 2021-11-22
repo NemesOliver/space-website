@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <HomePage>
         <Container>
-          <Flex direction="column" justify="space-between">
+          <Flex direction="column" justify="space-around">
             <div className="text">
               <h5>SO, YOU WANT TO TRAVEL TO</h5>
               <h1>SPACE</h1>

@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         color: ${({ theme }) => theme.color};
         text-align: center;
+        overflow: hidden;
     }
 
     h1 {

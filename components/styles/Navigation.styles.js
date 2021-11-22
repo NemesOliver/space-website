@@ -17,6 +17,7 @@ const Navigation = styled.nav`
 
     .hamburger {
       cursor: pointer;
+      z-index: 5;
     }
   }
 `;
