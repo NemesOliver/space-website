@@ -1,10 +1,13 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { HomePage } from "../components/styles/pages/Home.styled";
 import ButtonCTA from "../components/ButtonCTA";
 import Container from "../components/Container";
 import Flex from "../components/styles/utils/Flex";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -23,7 +26,9 @@ export default function Home() {
                 of this world experience!
               </p>
             </div>
-            <ButtonCTA text="EXPLORE" />
+            <div onClick={() => router.push("/destination")}>
+              <ButtonCTA text="EXPLORE" />
+            </div>
           </Flex>
         </Container>
       </HomePage>
