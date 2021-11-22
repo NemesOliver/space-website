@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const NavMobile = styled(motion.div)`
+  z-index: 5;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(70px);
   position: absolute;
