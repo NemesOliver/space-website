@@ -16,6 +16,6 @@ export const HomePage = styled.div`
       margin: 2rem 0 2rem 0;
     }
 
-    margin-bottom: 10rem;
+    /* margin-bottom: 10rem; */
   }
 `;
