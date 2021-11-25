@@ -32,7 +32,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h4 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        color: ${({ theme }) => theme.primary};
     }
 
     h5 {
@@ -72,7 +73,11 @@ const GlobalStyles = createGlobalStyle`
     hr {
         border: 1px solid #383B4B;
         margin: 2rem 0;
+
     }
+    .no-margin {
+            margin: 0;
+        }
 
 `;
 

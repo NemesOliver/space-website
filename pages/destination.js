@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import Container from "../components/Container";
-import { DestinationPage } from "../components/styles/pages/destination.styled";
+import { DestinationPage } from "../components/styles/pages/Destination.styled";
 import Flex from "../components/styles/utils/Flex";
 import TabPanelDestination from "../components/TabPanelDestination";
 
@@ -14,7 +13,7 @@ const destination = () => {
       <DestinationPage>
         <Container>
           <Flex direction="column" align="center">
-            <div className='text'>
+            <div className="text">
               <span>
                 <p>01</p>
               </span>
