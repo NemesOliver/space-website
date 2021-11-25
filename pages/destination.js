@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Container from "../components/Container";
-import { DestinationPage } from "../components/styles/pages/Destination.styled";
+import { DestinationPage } from "../components/styles/pages/Destination.styled.js";
 import Flex from "../components/styles/utils/Flex";
 import TabPanelDestination from "../components/TabPanelDestination";
 
