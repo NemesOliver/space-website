@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DestinationPage = styled.section`
+const DestinationPage = styled.section`
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -23,3 +23,5 @@ export const DestinationPage = styled.section`
     margin-right: 1rem;
   }
 `;
+
+export default DestinationPage;
