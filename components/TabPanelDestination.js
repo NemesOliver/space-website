@@ -4,16 +4,34 @@ import Flex from "./styles/utils/Flex";
 import { TabPanelDestination as Tab } from "./styles/TabPanelDestination.styles";
 import { motion, AnimatePresence } from "framer-motion";
 
-const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 200, y: 0 },
-};
-
 const TabPanelDestination = () => {
   const [active, setActive] = useState(0);
+  const [variant, setVariant] = useState({
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: -200, y: 0 },
+  });
 
-  const changeActive = (index) => setActive(index);
+  const changeDirection = (index) => {
+    if (active < index) {
+      setVariant({
+        hidden: { opacity: 0, x: -200 },
+        enter: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 0 },
+      });
+    } else {
+      setVariant({
+        hidden: { opacity: 0, x: 200 },
+        enter: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 0 },
+      });
+    }
+  };
+
+  const changeActive = (index) => {
+    changeDirection(index);
+    setActive(index);
+  };
 
   return (
     <Tab>
@@ -24,7 +42,7 @@ const TabPanelDestination = () => {
               active === index && (
                 <motion.div
                   key={index}
-                  variants={variants}
+                  variants={variant}
                   initial="hidden"
                   animate="enter"
                   exit="exit"
@@ -62,7 +80,7 @@ const TabPanelDestination = () => {
                 active === index && (
                   <motion.div
                     key={index}
-                    variants={variants}
+                    variants={variant}
                     initial="hidden"
                     animate="enter"
                     exit="exit"
