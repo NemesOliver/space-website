@@ -15,7 +15,13 @@ export const HomePage = styled.div`
     h1 {
       margin: 2rem 0 2rem 0;
     }
+  }
 
-    /* margin-bottom: 10rem; */
+  @media all and (min-width: 768px) {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+
+  @media all and (min-width: 1100px) {
+    background-image: url("/assets/home/background-home-desktop.jpg");
   }
 `;

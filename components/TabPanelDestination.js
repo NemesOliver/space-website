@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Flex from "./styles/utils/Flex";
 import { TabPanelDestination as Tab } from "./styles/TabPanelDestination.styles";
+import { motion, AnimatePresence } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 200, y: 0 },
+};
 
 const TabPanelDestination = () => {
   const [active, setActive] = useState(0);
@@ -11,20 +18,30 @@ const TabPanelDestination = () => {
   return (
     <Tab>
       <Flex direction="column">
-        <div className="img-wrapper-destination">
+        <AnimatePresence exitBeforeEnter initial={false}>
           {content.map(
             ({ img }, index) =>
               active === index && (
-                <Image
-                  key={img}
-                  src={img}
-                  alt="planet"
-                  width={170}
-                  height={170}
-                />
+                <motion.div
+                  key={index}
+                  variants={variants}
+                  initial="hidden"
+                  animate="enter"
+                  exit="exit"
+                  transition={{ type: "linear" }}
+                  className="img-wrapper-destination"
+                >
+                  <Image
+                    key={img}
+                    src={img}
+                    alt="planet"
+                    width={170}
+                    height={170}
+                  />
+                </motion.div>
               )
           )}
-        </div>
+        </AnimatePresence>
         <div>
           <ul className="tabs">
             <Flex>
@@ -39,11 +56,18 @@ const TabPanelDestination = () => {
               ))}
             </Flex>
           </ul>
-          {content.map(
-            ({ title, description, avgDistance, travelTime }, index) => (
-              <div key={title}>
-                {active === index && (
-                  <>
+          <AnimatePresence exitBeforeEnter initial={false}>
+            {content.map(
+              ({ title, description, avgDistance, travelTime }, index) =>
+                active === index && (
+                  <motion.div
+                    key={index}
+                    variants={variants}
+                    initial="hidden"
+                    animate="enter"
+                    exit="exit"
+                    transition={{ type: "linear" }}
+                  >
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <hr />
@@ -55,11 +79,10 @@ const TabPanelDestination = () => {
                       <p className="subheading2">EST. TRAVEL TIME</p>
                       <h5>{travelTime}</h5>
                     </div>
-                  </>
-                )}
-              </div>
-            )
-          )}
+                  </motion.div>
+                )
+            )}
+          </AnimatePresence>
         </div>
       </Flex>
     </Tab>
