@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { TabPanelTechnology as Tab } from "./styles/TabPanelTechnology.styles";
-import Flex from "./styles/utils/Flex";
-import { ImageWrapper } from "./styles/utils/ImageWrapper";
-import Container from "./Container";
+import { TabPanelTechnology as Tab } from "../styles/pages/technology/TabPanelTechnology.styles";
+import Flex from "../styles/utils/Flex";
+import { ImageWrapper } from "../styles/utils/ImageWrapper";
+import Container from "../Container";
 import { useState } from "react";
 
 const TabPanelTechnology = () => {

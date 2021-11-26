@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Container from "../components/Container";
-import DestinationPage from "../components/styles/pages/destination.styled";
+import DestinationPage from "../components/styles/pages/destination/destination.styled";
 import Flex from "../components/styles/utils/Flex";
-import TabPanelDestination from "../components/TabPanelDestination";
+import TabPanelDestination from "../components/destination/TabPanelDestination";
 
 const destination = () => {
   return (

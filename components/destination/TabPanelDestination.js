@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Flex from "./styles/utils/Flex";
-import { TabPanelDestination as Tab } from "./styles/TabPanelDestination.styles";
+import Flex from "../styles/utils/Flex";
+import { TabPanelDestination as Tab } from "../styles/pages/destination/TabPanelDestination.styles";
 import { motion, AnimatePresence } from "framer-motion";
 
 const rightToLeft = {

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { HomePage } from "../components/styles/pages/Home.styled";
+import { HomePage } from "../components/styles/pages/home/Home.styled";
 import ButtonCTA from "../components/ButtonCTA";
 import Container from "../components/Container";
 import Flex from "../components/styles/utils/Flex";

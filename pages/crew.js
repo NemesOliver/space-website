@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container from "../components/Container";
-import TabPanelCrew from "../components/TabPanelCrew";
-import { CrewPage } from "../components/styles/pages/Crew.styled";
+import TabPanelCrew from "../components/crew/TabPanelCrew";
+import { CrewPage } from "../components/styles/pages/crew/Crew.styled";
 import Flex from "../components/styles/utils/Flex";
 
 const destination = () => {

@@ -3,8 +3,8 @@ import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Navigation from "./styles/Navigation.styles";
-import { NavMobile } from "./styles/NavMobile.styles";
+import Navigation from "./styles/navigation/Navigation.styles";
+import { NavMobile } from "./styles/navigation/NavMobile.styles";
 import Flex from "./styles/utils/Flex";
 
 const Nav = () => {

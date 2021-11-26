@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Container from "../components/Container";
 import Flex from "../components/styles/utils/Flex";
-import TechnologyPage from "../components/styles/pages/Technology.styled";
-import TabPanelTechnology from "../components/TabPanelTechnology";
+import TechnologyPage from "../components/styles/pages/technology/Technology.styled";
+import TabPanelTechnology from "../components/technology/TabPanelTechnology";
 
 const technology = () => {
   return (

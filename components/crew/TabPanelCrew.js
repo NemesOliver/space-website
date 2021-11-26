@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Flex from "../components/styles/utils/Flex";
-import { TabPanelCrew as Tab } from "./styles/TabPanelCrew.styles";
-import { ImageWrapper } from "./styles/utils/ImageWrapper";
+import Flex from "../styles/utils/Flex";
+import { TabPanelCrew as Tab } from "../styles/pages/crew/TabPanelCrew.styles";
+import { ImageWrapper } from "../styles/utils/ImageWrapper";
 
 const TabPanelCrew = () => {
   const [activeIndex, setActiveIndex] = useState(0);
