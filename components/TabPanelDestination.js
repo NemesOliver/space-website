@@ -4,33 +4,30 @@ import Flex from "./styles/utils/Flex";
 import { TabPanelDestination as Tab } from "./styles/TabPanelDestination.styles";
 import { motion, AnimatePresence } from "framer-motion";
 
+const rightToLeft = {
+  hidden: { opacity: 0, x: -200 },
+  enter: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 0 },
+};
+
+const leftToRight = {
+  hidden: { opacity: 0, x: 200 },
+  enter: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 0 },
+};
+
 const TabPanelDestination = () => {
   const [active, setActive] = useState(0);
-  const [variant, setVariant] = useState({
-    hidden: { opacity: 0, x: -200, y: 0 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -200, y: 0 },
-  });
+  const [variant, setVariant] = useState(leftToRight);
 
-  const changeDirection = (index) => {
-    if (active < index) {
-      setVariant({
-        hidden: { opacity: 0, x: -200 },
-        enter: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: 0 },
-      });
-    } else {
-      setVariant({
-        hidden: { opacity: 0, x: 200 },
-        enter: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: 0 },
-      });
-    }
-  };
+  const changeActive = (index) => setActive(index);
 
-  const changeActive = (index) => {
-    changeDirection(index);
-    setActive(index);
+  const changeAnimationDirection = (index) =>
+    active < index ? setVariant(rightToLeft) : setVariant(leftToRight);
+
+  const changeSlide = (index) => {
+    changeActive(index);
+    changeAnimationDirection(index);
   };
 
   return (
@@ -66,7 +63,7 @@ const TabPanelDestination = () => {
               {tabs.map((tab, index) => (
                 <li
                   className={`${active === index ? "active" : ""}`}
-                  onClick={() => changeActive(index)}
+                  onClick={() => changeSlide(index)}
                   key={tab}
                 >
                   <p className="subheading2">{tab}</p>
